@@ -1,0 +1,6 @@
+{
+  "name": "RO Proposal Studio",
+  "description": "Reverse Osmosis (RO) & water-treatment proposal builder with pure engineering sizing calculators, offline-first local storage, and branded A4 PDF export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
