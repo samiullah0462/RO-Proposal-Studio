@@ -23,23 +23,29 @@ import {
 export function AppShell() {
   const [collapsed, setCollapsed] = useState(false);
   const [isDark, setIsDark] = useState(() => {
-    return document.documentElement.classList.contains('dark');
+    const saved = typeof window !== 'undefined' ? localStorage.getItem('theme') : null;
+    if (saved) return saved === 'dark';
+    return typeof window !== 'undefined' && document.documentElement.classList.contains('dark');
   });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDark]);
 
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location.pathname]);
 
   const toggleTheme = () => {
-    if (isDark) {
-      document.documentElement.classList.remove('dark');
-      setIsDark(false);
-    } else {
-      document.documentElement.classList.add('dark');
-      setIsDark(true);
-    }
+    setIsDark((prev) => !prev);
   };
 
   const navItems = [
