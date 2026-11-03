@@ -4,8 +4,8 @@
  */
 
 import React from 'react';
-import { SelfTestPage } from './features/dashboard/SelfTestPage.tsx';
+import { AppRoutes } from './app/routes.tsx';
 
 export default function App() {
-  return <SelfTestPage />;
+  return <AppRoutes />;
 }

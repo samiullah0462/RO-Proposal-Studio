@@ -1,1 +1,48 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
 @import "tailwindcss";
+
+:root {
+  --brand-900: #1F3A5F;
+  --brand-700: #2E75B6;
+  --brand-500: #5B9BD5;
+  --brand-100: #DEEBF7;
+  --slate-700: #44546A;
+  --bg: #F7F9FC;
+  --surface: #FFFFFF;
+  --border: #D8DFE8;
+  --text: #0F172A;
+  --text-muted: #5B6B7F;
+  --success: #2E7D32;
+  --warning: #B26A00;
+  --danger: #C62828;
+  --info: #0277BD;
+}
+
+.dark {
+  --brand-900: #9DC3E6;
+  --brand-700: #5B9BD5;
+  --brand-500: #2E75B6;
+  --brand-100: #1B2A3D;
+  --slate-700: #CBD5E1;
+  --bg: #0F172A;
+  --surface: #1E293B;
+  --border: #334155;
+  --text: #E2E8F0;
+  --text-muted: #94A3B8;
+  --success: #66BB6A;
+  --warning: #FFB74D;
+  --danger: #EF5350;
+  --info: #4FC3F7;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
